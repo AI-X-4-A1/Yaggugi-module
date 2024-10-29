@@ -74,7 +74,7 @@
 
 - shaneee123 | 이세인 | [깃허브](https://github.com/shaneee123)
 
-- Yesssung | 박예정 | [깃허브](https://github.com/Yesssung)
+- Yesssung | 박예성 | [깃허브](https://github.com/Yesssung)
 
 - Bigdata92 | 송지섭 | [깃허브](https://github.com/Bigdata92)
 
