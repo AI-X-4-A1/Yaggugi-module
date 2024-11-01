@@ -1,0 +1,6 @@
+fastapi
+torch
+transformers
+uvicorn
+accelerate>=0.26.0
+python-multipart
