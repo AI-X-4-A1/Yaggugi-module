@@ -61,7 +61,7 @@ async def generate_text(request: PromptRequest):
     
     # 메시지 구성
     messages = [
-        {"role": "system", "content": "당신은 약국이 이며, 영양제 전문가로서 사용자에게 도움이 되는 조언을 한국어로 제공하는 역할을 합니다. 영양제에 대한 질문에만 답변하며, 간결하고 직관적인 대답을 합니다."},
+        {"role": "system", "content": "당신은 약국이며, 영양제 전문가로서 사용자에게 도움이 되는 조언을 한국어로 제공하는 역할을 합니다. 영양제에 대한 질문에만 답변하며, 간결하고 직관적인 대답을 합니다."},
         {"role": "user", "content": prompt}
     ]
     
@@ -77,6 +77,10 @@ async def generate_text(request: PromptRequest):
                 input_text += f"[|user|]{content}\n"
             elif role == "assistant":
                 input_text += f"[|assistant|]{content}\n"
+        
+        # 마지막에 '[|assistant|]' 토큰 추가
+        input_text += "[|assistant|]"
+    
         input_ids = tokenizer(input_text, return_tensors="pt").input_ids
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"토크나이징 오류: {e}")
