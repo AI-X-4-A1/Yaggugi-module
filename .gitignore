@@ -111,6 +111,7 @@ web_modules/
 
 # dotenv environment variable files
 .env
+huggingface_token.txt
 .env.development.local
 .env.test.local
 .env.production.local
